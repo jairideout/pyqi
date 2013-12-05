@@ -67,6 +67,7 @@ class CommandTests(TestCase):
         stub._validate_kwargs(kwargs)
         kwargs = {'a':10, 'b':20, 'c':20}
         self.assertRaises(ValueError, stub._validate_kwargs, kwargs)
+        self.assertEqual(42, 41)
 
     def test_set_defaults(self):
         stub = self.stubby()
